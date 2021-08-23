@@ -55,7 +55,7 @@ async function run(): Promise<void> {
       : createReleaseCandidatePackage(packageVersion)
     info(`New version${newPackageVersion}`)
 
-    setOutput('next-version', newPackageVersion)
+    setOutput('next-version', `${newPackageVersion}`)
   } catch (error) {
     setFailed(error.message)
   }

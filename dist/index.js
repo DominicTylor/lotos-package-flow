@@ -51,7 +51,7 @@ function run() {
                 ? createStablePackage(packageVersion)
                 : createReleaseCandidatePackage(packageVersion);
             core_1.info(`New version${newPackageVersion}`);
-            core_1.setOutput('next-version', newPackageVersion);
+            core_1.setOutput('next-version', `${newPackageVersion}`);
         }
         catch (error) {
             core_1.setFailed(error.message);
