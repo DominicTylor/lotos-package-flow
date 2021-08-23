@@ -26,7 +26,7 @@ function createReleaseCandidatePackage(version: string): string {
     info('RC package flow, first increment')
 
     return version.replace(
-      /^(\d+.)(\d+)/,
+      /^(\d+.)(\d+).\d+/,
       (_, start, minor) => `${start + (parseInt(minor) + 1)}.0-rc.0`
     )
   }

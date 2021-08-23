@@ -33,7 +33,7 @@ function createStablePackage(version) {
 function createReleaseCandidatePackage(version) {
     if (/^(\d+.\d+.\d+)$/.test(version)) {
         core_1.info('RC package flow, first increment');
-        return version.replace(/^(\d+.)(\d+)/, (_, start, minor) => `${start + (parseInt(minor) + 1)}.0-rc.0`);
+        return version.replace(/^(\d+.)(\d+).\d+/, (_, start, minor) => `${start + (parseInt(minor) + 1)}.0-rc.0`);
     }
     core_1.info('RC package flow, not first increment');
     return version.replace(/^(\d+.\d+.\d+-rc.)(\d+)$/, (_, start, release) => start + (parseInt(release) + 1));

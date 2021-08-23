@@ -12,6 +12,9 @@ inputs:
     description: "Indicates whether to follow symbolic links"
     required: false
     default: "true"
+outputs:
+  next-version: # next version
+    description: 'Next version by package flow'
 runs:
   using: "node12"
   main: "dist/index.js"
